@@ -1,3 +1,5 @@
+import './project.css'
+
 const projects = [
   {
     name: "Project One",

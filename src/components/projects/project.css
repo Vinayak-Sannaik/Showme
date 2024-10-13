@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column; /* Stack the title and links vertically */
     align-items: center;
-    justify-content: flex-start; /* Align items to the start */
+    justify-content: space-evenly; /* Align items to the start */
     gap: 5px; /* Space between title and links */
     margin: 5px; /* Adds some space between items */
     box-sizing: border-box; /* Ensure padding does not affect width */

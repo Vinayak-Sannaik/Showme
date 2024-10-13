@@ -1,0 +1,65 @@
+.projects-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: center; /* Center items within the list */
+    width: 100%; /* Ensures the list takes full width of the container */
+  }
+  
+  .project-item {
+    flex: 0 1 160px; /* Allow items to grow and take space */
+    min-width: 250px;
+    min-height: 230px;
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column; /* Stack the title and links vertically */
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start */
+    gap: 5px; /* Space between title and links */
+    margin: 5px; /* Adds some space between items */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+  }
+  
+  .project-image {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Optional: Add rounded corners to the image */
+  }
+  
+  .project-buttons {
+    display: flex; /* Use flexbox for button alignment */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px; /* Space above buttons */
+  }
+  
+  .button {
+    background-color: #ffffff; /* Button background color */
+    color: #007acc; /* Button text color */
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+    border: 1px solid #007acc; /* Optional: Add a border */
+  }
+  
+  .button:hover {
+    background-color: #007acc; /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+  }
+  

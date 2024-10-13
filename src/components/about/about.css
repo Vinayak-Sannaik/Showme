@@ -1,0 +1,19 @@
+/* About component styles */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  padding: 30px;
+  line-height: 0.2;
+}
+
+.about-container img {
+  max-width: 100%;
+  height: auto; 
+  transition: transform 0.3s ease; 
+}
+
+.about-container img:hover {
+  transform: scale(1.02);
+}

@@ -1,0 +1,42 @@
+.skills-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%; /* Allows the container to take full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: center; /* Center items within the list */
+  width: 100%; /* Ensures the list takes full width of the container */
+}
+
+.skill-item {
+  flex: 1 1 160px; /* Allow items to grow and take space */
+  min-width: 160px; 
+  max-width: 210px; 
+  background-color: #007acc;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 5px; /* Adds some space between items */
+  box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.skill-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}

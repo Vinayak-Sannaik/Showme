@@ -8,25 +8,21 @@ const Contact: React.FC = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Ensure form.current is not null
-    if (form.current) {
-      emailjs
-        .sendForm('service_2pjr3wj', 'template_15fvwdk', form.current, {
-          publicKey: 'Q_WxzIvDYDrro7SlY', // Use the appropriate key
-        })
-        .then(
-          () => {
-            console.log('Message sent successfully!');
-            // Resetting form fields after sending the email
-            form.current.reset();
-          },
-          (error) => {
-            console.error('Failed to send message:', error.text);
-          }
-        );
-    } else {
-      console.error('Form reference is null');
-    }
+    // Use non-null assertion operator
+    emailjs
+      .sendForm('service_2pjr3wj', 'template_15fvwdk', form.current!, {  // Here is the change
+        publicKey: 'Q_WxzIvDYDrro7SlY', // Use the appropriate key
+      })
+      .then(
+        () => {
+          console.log('Message sent successfully!');
+          // Resetting form fields after sending the email
+          form.current!.reset(); // Here is the change
+        },
+        (error) => {
+          console.error('Failed to send message:', error.text);
+        }
+      );
   };
 
   return (

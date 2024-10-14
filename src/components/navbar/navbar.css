@@ -1,8 +1,10 @@
 nav {
-    background-color: #007acc;; /* Dark background for the navbar */
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
     padding: 10px 20px;
+    background-color: #007acc;
   }
-  
   nav ul {
     list-style: none; /* Remove default list styling */
     display: flex; /* Display links in a row */
@@ -27,4 +29,16 @@ nav {
   nav ul li a:hover {
     background-color: #ffffff; /* Lighter background on hover */
     color: #2e1212; /* Slightly lighter text color on hover */
+  }
+
+  @media (max-width: 640px) {
+    .about-container {
+      padding: 10px;
+    }
+    .navbar {
+      font-size: small;
+    }
+    .about-container img {
+      max-width: 70%;
+    }
   }

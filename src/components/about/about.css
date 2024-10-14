@@ -17,3 +17,23 @@
 .about-container img:hover {
   transform: scale(1.02);
 }
+
+@media (max-width: 640px){
+  
+  .child {
+      width: 100%;
+    }
+  
+  .heading{
+    font-size: medium;
+  }
+  .sub-heading{
+    font-size: small;
+  }
+  .about-container img {
+    min-width: 100%;
+    height: auto; 
+    transition: transform 0.3s ease; 
+    padding: 10px;
+  }
+}

@@ -40,3 +40,15 @@
   height: 30px;
   object-fit: contain;
 }
+
+@media (max-width:640px){
+  .skill-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  .skill-item{
+    min-width: 100px; 
+  max-width: 120px; 
+  }
+}

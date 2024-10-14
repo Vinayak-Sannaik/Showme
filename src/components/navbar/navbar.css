@@ -13,7 +13,14 @@ nav {
     padding: 0; /* Remove default padding */
     justify-content: space-around;
   }
-  
+  .dark-model{
+    all: unset;
+    background-color: transparent;
+  }
+
+  .dark-model:hover{
+    all: unset;
+  }
   nav ul li {
     display: inline;
   }

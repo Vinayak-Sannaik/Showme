@@ -1,6 +1,6 @@
 .skills-container {
   margin: 20px;
-  margin-top: -20px;
+  /* margin-top: -20px; */
   padding: 20px;
   /* background-color: #f9f9f9; */
   /* border-radius: 8px;
@@ -34,6 +34,10 @@
   gap: 10px;
   margin: 5px; /* Adds some space between items */
   box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.skill-icon:hover{
+  transform: scale(1.5);
 }
 
 .skill-icon {

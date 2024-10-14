@@ -1,52 +1,78 @@
 nav {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    padding: 10px 20px;
-    background-color: #007acc;
-  }
-  nav ul {
-    list-style: none; /* Remove default list styling */
-    display: flex; /* Display links in a row */
-    gap: 15px; /* Space between each link */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    justify-content: space-around;
-  }
-  .dark-model{
-    all: unset;
-    background-color: transparent;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread items to the sides */
+  padding: 10px 20px;
+  background-color: #007acc;
+}
 
-  .dark-model:hover{
-    all: unset;
-    cursor: pointer;
-  }
-  nav ul li {
-    display: inline;
+nav ul {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Display links in a row */
+  gap: 15px; /* Space between each link */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  justify-content: center;
+  flex: 1; /* Allow links to take up available space */
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff; /* White text color for contrast */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the links bold */
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #2e1212; /* Slightly lighter text color on hover */
+}
+
+nav ul li a img {
+  filter: brightness(0) saturate(100%); /* Makes the icon fully black */
+  transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+}
+
+nav ul li a img:hover {
+  transform: scale(1.5); /* Scales up the icon on hover */
+}
+
+.dark-model {
+  all: unset;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dark-model img {
+  filter: brightness(0) saturate(100%);
+  transition: transform 0.3s ease;
+  margin-left: 100px;
+  all: unset;
+}
+
+.dark-model img:hover {
+  transform: scale(1.5);background-color: #007acc;
+}
+
+/* Flexbox alignment for dark mode button */
+nav .dark-model {
+  margin-left: auto; /* Pushes the button to the right */
+}
+
+@media (max-width: 640px) {
+  .about-container {
+    padding: 10px;
   }
   
-  nav ul li a {
-    color: #fff; /* White text color for contrast */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make the links bold */
-    padding: 8px 12px;
-    transition: background-color 0.3s ease;
+  .navbar {
+    font-size: 20px;
   }
   
-  nav ul li a:hover {
-    background-color: #ffffff; /* Lighter background on hover */
-    color: #2e1212; /* Slightly lighter text color on hover */
+  .about-container img {
+    max-width: 70%;
   }
-
-  @media (max-width: 640px) {
-    .about-container {
-      padding: 10px;
-    }
-    .navbar {
-      font-size: small;
-    }
-    .about-container img {
-      max-width: 70%;
-    }
-  }
+}

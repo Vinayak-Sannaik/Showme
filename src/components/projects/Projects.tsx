@@ -1,5 +1,5 @@
 import './project.css'
-import img from './image.png'
+import img from './imgg.png'
 
 const projects = [
   {

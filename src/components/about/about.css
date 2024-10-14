@@ -10,13 +10,21 @@
 
 .about-container img {
   max-width: 100%;
-  height: auto; 
-  transition: transform 0.3s ease; 
+  height: auto;
+  animation: scaleUpDown 2s ease-in-out infinite; /* Continuous scale animation */
 }
 
-.about-container img:hover {
-  transform: scale(1.03);
+/* Keyframes for the scaling animation */
+@keyframes scaleUpDown {
+  0%, 100% {
+    transform: scale(1); /* Start and end at normal size */
+  }
+  50% {
+    transform: scale(1.07); /* Scale up to 1.03 in the middle */
+  }
 }
+
+
 
 .sub-heading:hover{
   transform: scale(1.2);

@@ -1,28 +1,31 @@
 import './contact.css';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'; // Importing EmailJS
 
 const Contact: React.FC = () => {
-  const form = useRef<HTMLFormElement>(null); // Specify the type for the form reference
+  const form = useRef<HTMLFormElement>(null); // Reference for the form
+  const [message, setMessage] = useState<string>(''); // State for success/error messages
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Use non-null assertion operator
-    emailjs
-      .sendForm('service_2pjr3wj', 'template_15fvwdk', form.current!, {  // Here is the change
-        publicKey: 'Q_WxzIvDYDrro7SlY', // Use the appropriate key
-      })
-      .then(
-        () => {
-          console.log('Message sent successfully!');
-          // Resetting form fields after sending the email
-          form.current!.reset(); // Here is the change
-        },
-        (error) => {
-          console.error('Failed to send message:', error.text);
-        }
-      );
+    if (form.current) { // Check if form.current is not null
+      emailjs
+        .sendForm('service_2pjr3wj', 'template_15fvwdk', form.current, {
+          publicKey: 'Q_WxzIvDYDrro7SlY', // Use the appropriate key
+        })
+        .then(
+          () => {
+            setMessage('Message sent successfully!'); // Set success message
+            form.current!.reset(); // Reset form fields after sending the email
+          },
+          (error) => {
+            setMessage('Failed to send message: ' + error.text); // Set error message
+          }
+        );
+    } else {
+      setMessage('Form reference is null'); // Handle the case when form.current is null
+    }
   };
 
   return (
@@ -57,6 +60,11 @@ const Contact: React.FC = () => {
         </div>
         <button type="submit">Send Message</button>
       </form>
+      {message && ( // Conditionally render the message
+        <div className="message">
+          {message}
+        </div>
+      )}
     </div>
   );
 };

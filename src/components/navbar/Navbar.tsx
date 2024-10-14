@@ -1,6 +1,11 @@
 import './navbar.css';
 
-const Navbar = ({toggleDarkMode, isDarkMode}) => {
+interface NavbarProps {
+  toggleDarkMode: () => void; // Function to toggle dark mode
+  isDarkMode: boolean; // Boolean to determine if dark mode is active
+}
+
+const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, isDarkMode }) => {
   return (
     <nav>
       <ul>

@@ -8,6 +8,7 @@ const Contact: React.FC = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // Ensure form.current is not null
     if (form.current) {
       emailjs
         .sendForm('service_2pjr3wj', 'template_15fvwdk', form.current, {
@@ -23,6 +24,8 @@ const Contact: React.FC = () => {
             console.error('Failed to send message:', error.text);
           }
         );
+    } else {
+      console.error('Form reference is null');
     }
   };
 

@@ -1,5 +1,6 @@
-import './contact.css'
+import './contact.css';
 import { useState } from 'react';
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -7,7 +8,7 @@ const Contact = () => {
     message: ''
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -15,7 +16,7 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   
     try {
@@ -38,7 +39,6 @@ const Contact = () => {
     }
   };
   
-
   return (
     <div className="contact-container">
       <h1>Contact Us</h1>

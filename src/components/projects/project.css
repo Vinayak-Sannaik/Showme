@@ -9,6 +9,11 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Center items horizontally */
+    transition: transform 0.3s ease;
+  }
+
+  .projects-container:hover{
+    transform: scale(1.02);
   }
   
   .projects-list {
@@ -27,7 +32,7 @@
     color: #fff;
     padding: 10px 14px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 16px;
     display: flex;
     flex-direction: column; /* Stack the title and links vertically */
     align-items: center;
@@ -36,11 +41,15 @@
     margin: 5px; /* Adds some space between items */
     box-sizing: border-box; /* Ensure padding does not affect width */
   }
+  .project-item:hover{
+    transform:scale(1.02);
+  }
   
   .project-image {
     width: 100%; /* Responsive image */
     height: auto; /* Maintain aspect ratio */
     border-radius: 4px; /* Optional: Add rounded corners to the image */
+    backdrop-filter: blur(8px);
   }
   
   .project-buttons {

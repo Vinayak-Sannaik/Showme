@@ -20,6 +20,7 @@ nav {
 
   .dark-model:hover{
     all: unset;
+    cursor: pointer;
   }
   nav ul li {
     display: inline;

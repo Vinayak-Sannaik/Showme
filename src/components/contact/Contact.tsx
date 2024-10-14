@@ -29,8 +29,8 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="contact-container">
-      <h1>Contact Us</h1>
+    <div id="connect" className="contact-container">
+      <h1>Let's Connect</h1>
       <form ref={form} onSubmit={sendEmail}>
         <div className="form-group">
           <label htmlFor="user_name">Name</label>

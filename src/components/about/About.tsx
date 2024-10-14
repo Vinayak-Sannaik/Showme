@@ -8,7 +8,7 @@ const About = () => {
       
       <h2 className='heading'>Vinayak Sannaik</h2>
       <h3 className='sub-heading'>Frontend developer @ TCS</h3>
-      <h2 className='heading'>Best Engineering | Good Development</h2>
+      <h2 className='heading'>Best Engineer | Good Developer</h2>
 
     </div>
   );

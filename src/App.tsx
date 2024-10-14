@@ -7,7 +7,7 @@ import Projects from './components/projects/Projects'
 import Skills from './components/skills/Skills'
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);

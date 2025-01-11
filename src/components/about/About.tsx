@@ -6,9 +6,9 @@ const About = () => {
     <div className="about-container">
       <img src={img} alt="About" />
       
-      <h2 className='heading'>Vinayak Sannaik</h2>
-      <h3 className='sub-heading'>Frontend developer @ TCS</h3>
-      <h2 className='heading'>Best Engineer | Good Developer</h2>
+     <h1 className="heading">Vinayak Sannaik</h1>
+<h2 className="sub-heading">Full-Stack Developer @ TCS</h2>
+<h3 className="tagline">Passionate Engineer | Skilled Developer</h3>
 
     </div>
   );

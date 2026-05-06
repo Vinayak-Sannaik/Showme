@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: center; /* Center items horizontally */
     transition: transform 0.3s ease;
+    color: darkcyan;
   }
 
   .projects-container:hover{
@@ -28,8 +29,8 @@
     flex: 0 1 160px; /* Allow items to grow and take space */
     min-width: 250px;
     min-height: 230px;
-    background-color: #007acc;
-    color: #ffffff;
+    background-color: #051621;
+    color: #dcc5c5;
     padding: 10px 14px;
     border-radius: 4px;
     font-size: 16px;
@@ -62,7 +63,7 @@
   }
   
   .button {
-    background-color: #ffffff; /* Button background color */
+    background-color: #210505; /* Button background color */
     color: #007acc; /* Button text color */
     padding: 10px 15px;
     border-radius: 4px;

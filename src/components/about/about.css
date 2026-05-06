@@ -6,6 +6,7 @@
   align-items: center; 
   padding: 30px;
   line-height: 1.5;
+  color: darkcyan;
 }
 
 .about-container img {
@@ -34,7 +35,6 @@
 }
 
 @media (max-width: 640px){
-  
   .child {
       width: 100%;
     }
